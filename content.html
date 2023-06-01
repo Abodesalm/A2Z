@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>A to Z files</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width,intial-scale=1.0" />
+    <meta name="A to Z files" content="here we will save our important file" />
+    <title>A to Z files</title>
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary" id="nav">
+      <div class="container-fluid">
+        <a class="navbar-brand green fs-1 col-3">A to Z</a>
+        <form class="d-flex col-8" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="search"
+            id="search"
+            onkeyup="searchd(this.value.toLowerCase())"
+          />
+        </form>
+      </div>
+    </nav>
+
+    <div class="files container">
+      <div class="row d-flex justify-content-evenly" id="filesout"></div>
+    </div>
+
+    <script src="main.js"></script>
+    <script>
+      function showd() {
+        let output = "";
+        for (let i = 0; i < dataf.length; i++) {
+          output += `
+      <div class="file col-5 col-md-4 col-lg-3 d-block mt-3"><h3 class="green mt-2">${dataf[i].titlee}</h3><p class="mt-2 para">${dataf[i].disc}</p><span class="mt-1 green d-block">${dataf[i].plat}</span><a href="${dataf[i].url}" class="btn mt-1 mb-1 btn-success">Download</a></div>
+    `;
+        }
+        outputf.innerHTML = output;
+      }
+      showd();
+
+      function searchd(valu) {
+        let filess = "";
+        for (let i = 0; i < dataf.length; i++) {
+          if (dataf[i].titlee.includes(valu)) {
+            filess += `
+       <div class="file col-5 col-md-4 col-lg-3 d-block mt-3"><h3 class="green mt-2">${dataf[i].titlee}</h3><p class="mt-2 para">${dataf[i].disc}</p><span class="mt-1 green d-block">${dataf[i].plat}</span><a href="${dataf[i].url}" class="btn mt-1 mb-1 btn-success">Download</a></div>
+    `;
+          }
+          outputf.innerHTML = filess;
+        }
+      }
+    </script>
+  </body>
+</html>

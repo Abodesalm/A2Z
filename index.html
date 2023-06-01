@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>A to Z files</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="viewport" content="width=device-width,intial-scale=1.0" />
+    <meta name="log in" content="here we will save our important file" />
+    <title>log in A2Z</title>
+  </head>
+  <body style="height: 100vh">
+    <div class="pran" id="pran">
+      <h1 class="green h1 mt-5 mb-4">Log in</h1>
+      <form class="logform col-10 m-auto mb-2">
+        <input
+          id="user"
+          type="text"
+          class="form-control foco"
+          placeholder="Username"
+        />
+
+        <input
+          id="pass"
+          type="password"
+          class="form-control foco"
+          placeholder="Password"
+        />
+
+        <div id="subm" class="bton bton-b btn mt-3">submit</div>
+      </form>
+      <div id="link" style="width: 100%; height: 50px; margin-top: 70px"></div>
+    </div>
+
+    <script>
+      let submit = document.getElementById("subm");
+      let username = document.getElementById("user");
+      let pass = document.getElementById("pass");
+      let pran = document.getElementById("pran");
+      let linkDiv = document.getElementById("link");
+      let nextLink =
+        '<a class="nextl mt-5" href="content.html">go to files</a>';
+      let adminLink =
+        '<a class="nextl" href="admincontent.html">admin access</a>';
+      let wrong = document.createTextNode("that's wrong");
+      submit.onclick = function () {
+        if (username.value == "N" && pass.value == "a") {
+          linkDiv.innerHTML = nextLink;
+        } else if (username.value == "A" && pass.value == "a") {
+          linkDiv.innerHTML = adminLink;
+        } else {
+          linkDiv.appendChild(wrong);
+        }
+      };
+    </script>
+  </body>
+</html>
