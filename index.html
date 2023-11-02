@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>A to Z files</title>
+    <title>log in A to Z</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="bootstrap.min.css" />
 
@@ -20,6 +20,8 @@
   <body style="height: 100vh">
     <div class="pran" id="pran">
       <h1 class="green h1 mt-5 mb-4">Log in</h1>
+      <p>normal  :  normalpass</p>
+      <p>adminaccess  :  admin2pass</p>
       <form class="logform col-10 m-auto mb-2">
         <input
           id="user"
@@ -27,7 +29,6 @@
           class="form-control foco"
           placeholder="Username"
         />
-
         <input
           id="pass"
           type="password"
@@ -52,9 +53,9 @@
         '<a class="nextl" href="admincontent.html">admin access</a>';
       let wrong = document.createTextNode("that's wrong");
       submit.onclick = function () {
-        if (username.value == "N" && pass.value == "a") {
+        if (username.value.toLowerCase() == "normal" && pass.value == "normalpass") {
           linkDiv.innerHTML = nextLink;
-        } else if (username.value == "A" && pass.value == "a") {
+        } else if (username.value.toLowerCase() == "adminaccess" && pass.value == "admin2pass") {
           linkDiv.innerHTML = adminLink;
         } else {
           linkDiv.appendChild(wrong);

@@ -1,14 +1,32 @@
-.root {
+:root {
   --blue: #0d6efd;
   --green: #198754;
 }
-* {margin: 0px;padding: 0px;font-family: "Rubik", sans-serif;}
-.pran {width: 300px;
-  height: 400px;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Rubik", sans-serif;
+  transition:0.2s ease !important;
+  -webkit-transition:0.2s ease !important;
+  -moz-transition:0.2s ease !important;
+  -ms-transition:0.2s ease !important;
+  -o-transition:0.2s ease !important;
+}
+::selection{
+  background-color: #198754;
+  color: white;
+}
+.pran {
+  width: 300px;
+  height: 450px;
   border: 1.5px solid gray;
-  border-radius: 7.5%;
+  border-radius: 25px;
   margin: 25vh auto;
   text-align: center;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
 }
 .logform {
   height: 150px;
@@ -47,9 +65,13 @@ nav {
 .file {
   min-height: 200px;
   border: 1px solid gray;
-  border-radius: 7.5%;
+  border-radius: 30px;
   margin-top: 20px;
   text-align: center;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 .para {
   font-weight: light;
@@ -58,9 +80,13 @@ nav {
 }
 .controlp {
   border: 1.5px solid gray;
-  width: 80%;
+  width: 350px;
   height: 350px;
-  border-radius: 7.5%;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
 }
 .ed {
   width: 80%;

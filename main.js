@@ -69,7 +69,7 @@ function showd(){
         <span class="mt-1 green d-block">${dataf[i].plat}</span>
         <div onclick="updated(${i})" class="btn mt-1 mb-1 btn-warning d-block ed">edit</div>
         <div onclick="deleted(${i})" class="btn btn-danger ed">delete</div>
-        <a href="${dataf[i].url}" class="btn mt-1 mb-1 btn-success d-block ed">Download</a></div>
+        <a href="${dataf[i].url}" target="_blank" class="btn mt-1 mb-1 btn-success d-block ed">visit</a></div>
       </div>
       `
   }
@@ -107,7 +107,7 @@ function searchd(valu){
         <span class="mt-1 green d-block">${dataf[i].plat}</span>
         <div onclick="updated(${i})" class="btn mt-1 mb-1 btn-warning d-block ed">edit</div>
         <div onclick="deleted(${i})" class="btn btn-danger ed">delete</div>
-        <a href="${dataf[i].url}" class="btn mt-1 mb-1 btn-success d-block ed">Download</a></div>
+        <a href="${dataf[i].url}" target="_blank" class="btn mt-1 mb-1 btn-success d-block ed">visit</a></div>
       </div>
       `
     }
